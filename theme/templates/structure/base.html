@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- Metadata -->
+	<meta charset="utf-8">
+    
+    <!-- Title -->
+    <title>MSAIL</title>
+    
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic,600,600italic' rel='stylesheet' type='text/css'>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" type="text/css">
+</head>
+
+<body><div id="page-wrap">
+    <!-- Page Header -->
+    <div id="page-header">
+        <img id="header-logo" src="theme/images/msail-logo-head.png">
+        <div id="header-text"><div>
+            <div id="header-title">
+                Michigan Student Artificial Intelligence Lab
+            </div>
+            <ul id="header-nav">
+                <li><a href="/schedule">Schedule<a></li>
+                <li><a href="/resources">Resources<a></li>
+                <li><a href="/tutorials">Tutorials<a></li>
+                <li><a href="/reading-group">Reading Group<a></li>
+                <li><a href="/hack-nights">Hack Nights<a></li>
+            </ul>
+        </div></div>
+    </div>
+    
+    <!-- Page Body -->
+    <div id="page-content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    <!-- Page Footer -->
+    <div id="page-footer">
+        Website by <b>Benjamin Bray</b> (<a href="mailto:benrbray@umich.edu">benrbray@umich.edu</a>)
+    </div>
+    
+</div></body>
+</html>
