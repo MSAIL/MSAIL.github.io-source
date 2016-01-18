@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" type="text/css">
 </head>
 
-<body><div id="page-wrap">
-    <!-- Page Header -->
-    <div id="page-header">
+<body>
+	<!-- Page Header -->
+    <div id="page-header"><div id="header-center"><div id="header-content">
         <!-- Logo -->
 		<a id="header-logo" href="/">
 			<img src="{{ SITEURL }}/theme/images/msail-logo-head.png">
@@ -35,18 +35,20 @@
 				{% endfor %}
             </ul>
         </div></div>
-    </div>
-    
-    <!-- Page Body -->
-    <div id="page-content">
-        {% block content %}
-        {% endblock %}
-    </div>
-    
-    <!-- Page Footer -->
-    <div id="page-footer">
-        Website by <b>Benjamin Bray</b> (<a href="mailto:benrbray@umich.edu">benrbray@umich.edu</a>)
-    </div>
-    
-</div></body>
+    </div></div></div>
+	
+	<!-- Page Body -->
+	<div id="page-wrap">
+		<!-- Page Content -->
+	    <div id="page-content">
+	        {% block content %}
+	        {% endblock %}
+	    </div>
+	    
+	    <!-- Page Footer -->
+	    <div id="page-footer">
+	        Website by <b>Benjamin Bray</b> (<a href="mailto:benrbray@umich.edu">benrbray@umich.edu</a>)
+	    </div>
+	</div>
+</body>
 </html>
