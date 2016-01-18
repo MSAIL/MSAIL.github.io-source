@@ -6,13 +6,17 @@
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pharetra eros vitae varius semper. Duis rutrum vitae mauris quis lacinia. Pellentesque arcu urna, luctus vitae dui non, fringilla mattis orci. Etiam tristique quam ac enim placerat placerat. Duis gravida scelerisque libero, vitae convallis ex maximus a. Cras efficitur dui a dapibus porta.</p>
 
 <div class="event-list">
-    <!-- Event -------------------------------------------------------->
+    {% if articles %} {% for article in articles %}
     <div class="event-panel">
         <!-- Event Side -->
         <div class="event-side">
             <div class="fancy-date">
-                <div class="fancy-dayofweek">TUE</div>
-                <div class="fancy-monthday">Jan 19</div>
+                <div class="fancy-dayofweek">
+                    {{ article.date|strftime('%a') | upper }}
+                </div>
+                <div class="fancy-monthday">
+                    {{ article.date|strftime('%b %d') }}
+                </div>
             </div>
             <div class="event-icon"></div>
         </div>
@@ -20,74 +24,22 @@
         <!-- Event Main -->
         <div class="event-main">
             <div class="event-header">
-                <span class="event-type">Tutorial:</span>
-                <span class="event-title">K-Nearest Neighbors Classification</span>
+                <span class="event-type">{{ article.category }}:</span>
+                <span class="event-title">{{ article.title }}</span>
                 
                 <div class="event-info">
-                    Tuesday, January 19 @ 5:30-7pm in DOW 2166
+                    {{ article.date|strftime('%A, %B %d, %Y @ %I:%M %p') }}
+                    {% if article.location %}
+                        in {{ article.location }}
+                    {% endif %}
                 </div>
             </div>
             <div class="event-body">
-                In pattern recognition, the k-Nearest Neighbors algorithm (or k-NN for short) is a non-parametric method used for classification and regression. In both cases, the input consists of the k closest training examples in the feature space. The output depends on whether k-NN is used for classification or regression.
-                
-                k-NN is a type of instance-based learning, or lazy learning, where the function is only approximated locally and all computation is deferred until classification. The k-NN algorithm is among the simplest of all machine learning algorithms.
+                {{ article.summary }}
             </div>
         </div>
     </div>
-    
-    <!-- Event -------------------------------------------------------->
-    <div class="event-panel">
-        <!-- Event Side -->
-        <div class="event-side">
-            <div class="fancy-date">
-                <div class="fancy-dayofweek">TUE</div>
-                <div class="fancy-monthday">Jan 19</div>
-            </div>
-            <div class="event-icon"></div>
-        </div>
-        
-        <!-- Event Main -->
-        <div class="event-main">
-            <div class="event-header">
-                <span class="event-type">Reading Group:</span>
-                <span class="event-title">Spectral Clustering</span>
-                
-                <div class="event-info">
-                    Tuesday, January 19 @ 7-8pm in DOW 2166
-                </div>
-            </div>
-            <div class="event-body">
-                In multivariate statistics and the clustering of data, spectral clustering techniques make use of the spectrum (eigenvalues) of the similarity matrix of the data to perform dimensionality reduction before clustering in fewer dimensions. The similarity matrix is provided as an input and consists of a quantitative assessment of the relative similarity of each pair of points in the dataset.
-            </div>
-        </div>
-    </div>
-    
-    <!-- Event -------------------------------------------------------->
-    <div class="event-panel">
-        <!-- Event Side -->
-        <div class="event-side">
-            <div class="fancy-date">
-                <div class="fancy-dayofweek">WED</div>
-                <div class="fancy-monthday">Jan 20</div>
-            </div>
-            <div class="event-icon"></div>
-        </div>
-        
-        <!-- Event Main -->
-        <div class="event-main">
-            <div class="event-header">
-                <span class="event-type">Hack Night:</span>
-                <span class="event-title">Winter Kickoff</span>
-                
-                <div class="event-info">
-                    Wednesday, January 20 @ 7-8pm in DOW 2166
-                </div>
-            </div>
-            <div class="event-body">
-                Join us for our first ever hack night!  Bored of homework?  Tired of theory?  Itching to actually <em>implement something</em>?  Come to hack nights to solve data science challenges, implement a new algorithm, or work on machine learning homework if you need to!  This is a great place to collaborate with other MSAIL members!
-            </div>
-        </div>
-    </div>
+    {% endfor %} {% endif %}
 </div>
 
 {% endblock %}
