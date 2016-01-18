@@ -31,8 +31,7 @@ PAGE_ORDER_BY = "order";
 # Static Paths:  Simple static pages, with custom URLS
 STATIC_PATHS = ['images', 'static'];
 EXTRA_PATH_METADATA = {
-    'static/favicon.ico': {'path': 'favicon.ico'},
-    'static/CNAME'      : {'path': 'CNAME'}
+    'static/favicon.ico': {'path': 'favicon.ico'}
 };
 
 # URL Settings (different from publishconf.py)
