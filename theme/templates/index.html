@@ -6,7 +6,8 @@
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pharetra eros vitae varius semper. Duis rutrum vitae mauris quis lacinia. Pellentesque arcu urna, luctus vitae dui non, fringilla mattis orci. Etiam tristique quam ac enim placerat placerat. Duis gravida scelerisque libero, vitae convallis ex maximus a. Cras efficitur dui a dapibus porta.</p>
 
 <div class="event-list">
-    {% if articles %} {% for article in articles %}
+    {% if articles %}
+    {% for article in articles %}
     <div class="event-panel">
         <!-- Event Side -->
         <div class="event-side">
@@ -24,9 +25,14 @@
         <!-- Event Main -->
         <div class="event-main">
             <div class="event-header">
-                <span class="event-type">{{ article.category }}:</span>
-                <span class="event-title">{{ article.title }}</span>
+                <!-- Title -->
+                <a class="event-title" href="#">
+                    <span class="event-type">{{ article.category }}:</span>
+                    <span class="event-name">{{ article.title }}</span>
+                </a>
                 
+                
+                <!-- Info -->
                 <div class="event-info">
                     {{ article.date|strftime('%A, %B %d, %Y @ %I:%M %p') }}
                     {% if article.location %}
@@ -39,7 +45,8 @@
             </div>
         </div>
     </div>
-    {% endfor %} {% endif %}
+    {% endfor %}
+    {% endif %}
 </div>
 
 {% endblock %}

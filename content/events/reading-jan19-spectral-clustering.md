@@ -1,4 +1,4 @@
-Title: Kickoff, Markov Models, and Spectral Clustering
+Title: Spectral Clustering
 Date: January 19, 2016 7:00 PM
 Location: DOW 2166
 Category: Reading Group

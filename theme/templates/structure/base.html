@@ -18,17 +18,21 @@
 <body><div id="page-wrap">
     <!-- Page Header -->
     <div id="page-header">
-        <img id="header-logo" src="theme/images/msail-logo-head.png">
+        <!-- Logo -->
+		<a id="header-logo" href="/">
+			<img src="theme/images/msail-logo-head.png">
+		</a>
+		<!-- Header Text -->
         <div id="header-text"><div>
-            <div id="header-title">
+            <a id="header-title" href="/">
                 Michigan Student Artificial Intelligence Lab
-            </div>
+            </a>
             <ul id="header-nav">
-                <li><a href="/schedule">Schedule<a></li>
-                <li><a href="/resources">Resources<a></li>
-                <li><a href="/tutorials">Tutorials<a></li>
-                <li><a href="/reading-group">Reading Group<a></li>
-                <li><a href="/hack-nights">Hack Nights<a></li>
+				{% for page in PAGES %}
+					<li><a href="{{ SITEURL }}/{{ page.url }}">
+						{{page.title}}
+					</a></li>
+				{% endfor %}
             </ul>
         </div></div>
     </div>

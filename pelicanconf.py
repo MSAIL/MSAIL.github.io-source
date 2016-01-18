@@ -20,8 +20,9 @@ DEFAULT_DATE_FORMAT = "%a, %d %b %Y";
 
 ## Pages, Paths, and URLs ------------------------------------------------------
 
-# Articles
+# Articles & Pages
 ARTICLE_PATHS = ['events'];
+PAGE_ORDER_BY = "order";
 
 # Static Paths:  Simple static pages, with custom URLS
 STATIC_PATHS = ['images', 'static'];
