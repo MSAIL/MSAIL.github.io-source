@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import datetime;
 
 # No Cache
 LOAD_CONTENT_CACHE = False;
@@ -17,6 +18,9 @@ PATH = 'content';
 THEME = "./theme";
 DEFAULT_PAGINATION = False;
 DEFAULT_DATE_FORMAT = "%a, %d %b %Y";
+
+# Custom Settings (custom variables defined by me, to be passed to templates)
+SITE_LAST_MODIFIED = datetime.datetime.now();
 
 ## Pages, Paths, and URLs ------------------------------------------------------
 

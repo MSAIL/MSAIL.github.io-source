@@ -47,7 +47,12 @@
 	    
 	    <!-- Page Footer -->
 	    <div id="page-footer">
-	        Website by <b>Benjamin Bray</b> (<a href="mailto:benrbray@umich.edu">benrbray@umich.edu</a>)
+			<span style="float: left">
+				Last updated on {{ SITE_LAST_MODIFIED | strftime("%B %d, %Y") }}
+			</span>
+	        <span style="float: right">
+				Website by <b>Benjamin Bray</b> (<a href="mailto:benrbray@umich.edu">benrbray@umich.edu</a>)
+			</span>
 	    </div>
 	</div>
 </body>
