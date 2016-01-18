@@ -168,6 +168,22 @@ a.event-title:hover {
     color: #666;
 }
 
+/* Posts ---------------------------------------------------------------------*/
+
+.post-title {
+    font-weight: normal;
+    text-align: left;
+}
+
+.post-title b {
+    font-weight: 600;
+}
+
+.post-info {
+    font-size: 16px;
+    color:  #666;
+}
+
 /* Page Footer ---------------------------------------------------------------*/
 
 #page-footer {

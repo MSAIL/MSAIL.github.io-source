@@ -32,9 +32,9 @@ EXTRA_PATH_METADATA = {
 };
 
 # URL Settings (different from publishconf.py)
-ARTICLE_URL = "events/{category}/{date:%Y}/{date:%b}/{date:%d}/{slug}.html";
+ARTICLE_URL = "events/{category}/{date:%Y}/{date:%b}/{date:%d}/{slug}";
 ARTICLE_SAVE_AS = 'events/{category}/{date:%Y}/{date:%b}/{date:%d}/{slug}.html'
-PAGE_URL = '{slug}.html'
+PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}.html'
 
 ## Content Generation ----------------------------------------------------------
