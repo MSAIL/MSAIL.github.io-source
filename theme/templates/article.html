@@ -1,0 +1,23 @@
+{% extends "structure/base.html" %}
+
+<!-- Page Content ------------------------------------------------------------->
+{% block content %}
+
+<!-- Title -->
+<h1 class="post-title">
+    <b>{{ article.category }}:</b>
+    {{ article.title }}
+</h1>
+
+<!-- Info -->
+<div class="event-info">
+    {{ article.date|strftime('%A, %B %d, %Y @ %I:%M %p') }}
+    {% if article.location %}
+        in {{ article.location }}
+    {% endif %}
+</div>
+
+<!-- Post -->
+{{ article.content }}
+
+{% endblock %}
