@@ -21,3 +21,5 @@ By the end of our session, you'll have:
  * A Mental map of Machine Learning's lay of the land.
  * Experience using standard packages to analyze real data.
  * Enthusiasm to participate in more of MSAIL's activities!
+
+The problem is computationally difficult (NP-hard); however, there are efficient heuristic algorithms that are commonly employed and converge quickly to a local optimum. These are usually similar to the expectation-maximization algorithm for mixtures of Gaussian distributions via an iterative refinement approach employed by both algorithms. Additionally, they both use cluster centers to model the data; however, k-means clustering tends to find clusters of comparable spatial extent, while the expectation-maximization mechanism allows clusters to have different shapes.
