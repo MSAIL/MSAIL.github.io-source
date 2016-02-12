@@ -1,0 +1,3 @@
+[submodule "MSAIL.github.io"]
+	path = MSAIL.github.io
+	url = git@github.com:MSAIL/MSAIL.github.io.git
