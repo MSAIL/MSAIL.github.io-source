@@ -1,4 +1,4 @@
-Title: Clustering the Iris Dataset via K-Means
+Title: Gaussian Mixture Modeling
 Date: January 26, 2016 5:30 PM
 Location: DOW 2166
 Category: Tutorial
