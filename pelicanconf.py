@@ -45,6 +45,7 @@ PAGE_SAVE_AS = '{slug}.html'
 # Delete output directory when regenerating, but save Git repositories.
 DELETE_OUTPUT_DIRECTORY = True
 OUTPUT_RETENTION = [".git", ".gitignore", ".git/*"]
+OUTPUT_PATH = "/MSAIL.github.io"
 
 ## External Links / Plugins ----------------------------------------------------
 
